@@ -2,7 +2,7 @@ import { Stack, useTheme } from "@mui/material"
 
 type DailyComparisonCardProps = {
     children: React.ReactNode
-    color: string
+    color?: string
     outlined?: boolean
 }
 
@@ -17,7 +17,7 @@ const DailyComparisonCard = ({ children, color, outlined = false }: DailyCompari
                 borderRadius: '16px',
                 padding: 2,
                 color: outlined ? color : palette.common.white,
-                border: `3px solid ${palette.primary.main}`,
+                border: `2px solid ${palette.primary.main}`,
             }}>
             {children}
         </Stack>

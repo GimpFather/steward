@@ -1,15 +1,15 @@
-import { Container } from "@mui/material"
+import { Container } from "@mui/material";
 
 interface PageContainerProps {
-    children: React.ReactNode
+   children: React.ReactNode;
 }
 
 const PageContainer = ({ children }: PageContainerProps) => {
-    return (
-        <Container maxWidth="md" sx={{ padding: 2 }}>
-            {children}
-        </Container>
-    )
-}
+   return (
+      <Container maxWidth="md" sx={{ padding: 2 }}>
+         {children}
+      </Container>
+   );
+};
 
-export default PageContainer
+export default PageContainer;

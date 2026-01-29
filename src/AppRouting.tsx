@@ -1,19 +1,17 @@
-import { Route, Routes } from "react-router"
-import AppLayout from "./components/UI/AppLayout"
-import PaymentsPage from "./views/PaymentsPage.view"
-import DeepDivePage from "./views/DeepDive.view"
-import ExpensesPage from "./views/ExpensesPage.view"
+import { Route, Routes } from "react-router";
+import AppLayout from "./components/Common/Layouts/AppLayout";
+import DashboardPage from "./views/DashboardPage.view";
+import PaymentsPage from "./views/PaymentsPage.view";
 
 const AppRouting = () => {
-    return (
-        <Routes location={location} key={location.pathname}>
-            <Route element={<AppLayout />}>
-                <Route path="/" element={<ExpensesPage />} />
-                <Route path="/payments" element={<PaymentsPage />} />
-                <Route path="/deep-dive" element={<DeepDivePage />} />
-            </Route>
-        </Routes>
-    )
-}
+	return (
+		<Routes location={location} key={location.pathname}>
+			<Route element={<AppLayout />}>
+				<Route path="/" element={<DashboardPage />} />
+				<Route path="/payments" element={<PaymentsPage />} />
+			</Route>
+		</Routes>
+	);
+};
 
-export default AppRouting
+export default AppRouting;

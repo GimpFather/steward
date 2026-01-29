@@ -5,7 +5,6 @@ import { PAYMENTS } from "../api/static";
 import type { Payment } from "../api/types";
 import BorderBox from "../components/Common/BorderBox";
 import InputField from "../components/Common/InputField";
-import PageContainer from "../components/Common/Layouts/PageContainer";
 import PaymentRecord from "../components/Common/PaymentRecord";
 
 const PaymentsPageView = () => {
@@ -20,28 +19,26 @@ const PaymentsPageView = () => {
 	};
 
 	return (
-		<PageContainer>
-			<Stack gap={2}>
-				<InputField
-					placeholder="Search for a payment"
-					adornment={{
-						position: "start",
-						icon: <MagnifyingGlassIcon size={24} />,
-					}}
-					onChange={(e) => handleSearch(e.target.value)}
-				/>
-				<BorderBox outlined>
-					<Stack gap={1}>
-						{filteredPayments.map((payment) => (
-							<Fragment key={payment.id}>
-								<PaymentRecord payment={payment} key={payment.id} />
-								<Divider />
-							</Fragment>
-						))}
-					</Stack>
-				</BorderBox>
-			</Stack>
-		</PageContainer>
+		<Stack gap={2}>
+			<InputField
+				placeholder="Search for a payment"
+				adornment={{
+					position: "start",
+					icon: <MagnifyingGlassIcon size={24} />,
+				}}
+				onChange={(e) => handleSearch(e.target.value)}
+			/>
+			<BorderBox outlined>
+				<Stack gap={1}>
+					{filteredPayments.map((payment) => (
+						<Fragment key={payment.id}>
+							<PaymentRecord payment={payment} key={payment.id} />
+							<Divider />
+						</Fragment>
+					))}
+				</Stack>
+			</BorderBox>
+		</Stack>
 	);
 };
 

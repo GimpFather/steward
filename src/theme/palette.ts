@@ -6,6 +6,9 @@ export const palette: PaletteOptions = {
 		light: "#4A4D6A",
 		dark: "#1F2133",
 	},
+	secondary: {
+		main: "#7AA2F7",
+	},
 	accent: {
 		main: "#E4E0DB",
 		light: "#F0EEEB",
